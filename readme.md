@@ -1,6 +1,6 @@
 # 📬 MailWebScrapper
 
-**MailWebScrapper** is a simple Python script designed to extract email addresses from web pages.  
+**MailWebScrapper** is a simple Python script that extracts email addresses from web pages.  
 I created this project as part of my work-study search, to help me quickly find recruiter contact information from company websites or professional platforms.
 
 ## 🔍 Purpose
@@ -16,10 +16,11 @@ It can be especially useful for:
 
 The script performs the following steps:
 
-1. Sends an HTTP request to the specified URL.  
-2. Retrieves and parses the HTML content of the page.  
-3. Uses a regular expression to find all email addresses.  
-4. Prints the unique email addresses found.
+1. Requests the URL from the user via an input prompt.
+2. Sends an HTTP request to the specified URL.
+3. Retrieves and parses the HTML content of the page.
+4. Uses a regular expression to find all email addresses.
+5. Prints the unique email addresses found.
 
 ## 🐍 Requirements
 
@@ -36,14 +37,22 @@ pip install requests
 To run the script, open your terminal or command prompt and use the following command:
 
 ```bash
-python main.py http://example.com
+python main.py
 ```
 
-Replace `http://example.com` with the URL of the website you want to scrape.
+You will then be prompted to enter the URL of the website you want to scrape:
+
+```
+Paste your URL : http://example.com
+```
+
+The script will then fetch the emails from the page and print them.
 
 ### Example Output
 
 ```
+Paste your URL : http://example.com
+
 Email addresses found on http://example.com:
 contact@company.com
 recruiter@jobs.com
